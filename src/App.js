@@ -21,7 +21,7 @@ const App = () => {
       notify("To generate password you must select atleast one checkbox", true)
     }
     else {
-      let characterList = ""
+      const  characterList = ""
       if (includeNumbers) {
         characterList = characterList + numbers
       }
@@ -41,7 +41,7 @@ const App = () => {
 
   }
   const createPassword = (characterList) => {
-    let password = ""
+    const password = ""
     const characterListLength = characterList.length
     for (let i = 0; i < passwordLength; i++) {
       const characterIndex = Math.round(Math.random() * characterListLength)

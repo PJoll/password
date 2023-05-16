@@ -28,7 +28,7 @@ const App = () => {
     ) {
       notify("To generate password you must select atleast one checkbox", true);
     } else {
-      const characterList = "";
+      let characterList = "";
       if (includeNumbers) {
         characterList = characterList + numbers;
       }
@@ -46,7 +46,7 @@ const App = () => {
     }
   };
   const createPassword = (characterList) => {
-    const password = "";
+    let password = "";
     const characterListLength = characterList.length;
     for (let i = 0; i < passwordLength; i++) {
       const characterIndex = Math.round(Math.random() * characterListLength);
@@ -99,7 +99,7 @@ const App = () => {
             <button className="copy__btn">
               <FontAwesomeIcon
                 icon={faClipboard}
-                size="5x"
+                size="3x"
                 onClick={handleCopyPassword}
               />
             </button>
